@@ -2,14 +2,13 @@ require '3_util'
 require '4_util'
 require '5_util'
 
-def required_factors
-  subfactors = pairs(20,1).select do |pair|
-    divides?(pair[0], pair[1]) && pair[0] != pair[1]
-  end
-
-  subfactors = subfactors.map {|pair| pair[0]}.uniq
-  (1..20).select { |x| !subfactors.include?(x) }
+subfactors = pairs(20,1).select do |pair|
+  divides?(pair[0], pair[1]) && pair[0] != pair[1]
 end
+
+subfactors = subfactors.map {|pair| pair[0]}.uniq
+required_factors = (1..20).select { |x| !subfactors.include?(x) }
+
 
 pop = product_of_primes 20
 
