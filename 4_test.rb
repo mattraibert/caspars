@@ -1,7 +1,7 @@
 require 'minitest/autorun'
-require '4'
+require '4_util'
 
-class FourTest < MiniTest::Unit::TestCase
+class FourUtilTest < MiniTest::Unit::TestCase
   def test_palindrome
     assert(palindromic?(9009))
     assert(!palindromic?(1234))
