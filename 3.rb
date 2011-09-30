@@ -14,4 +14,4 @@ def prime_factors n
   factors(n).select { |x| prime? x }
 end
 
-puts prime_factors 600851475143
+puts prime_factors(600851475143).first
