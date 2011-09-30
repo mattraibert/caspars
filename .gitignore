@@ -1,0 +1,7 @@
+*~
+*.txt
+# For emacs:
+*~
+\#*
+.\#*
+mongod-files
