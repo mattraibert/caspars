@@ -13,4 +13,11 @@ class FiveUtilTest < MiniTest::Unit::TestCase
     assert_equal 2, (1..4).find_first { |x| x % 2 == 0 }
     assert_equal 1, (1..4).find_first { |x| x % 2 == 1 }
   end
+
+  def test_product_of_primes
+    assert_equal 2, product_of_primes(2)
+    assert_equal 6, product_of_primes(3)
+    assert_equal 6, product_of_primes(4)
+    assert_equal 30, product_of_primes(5)
+  end
 end
