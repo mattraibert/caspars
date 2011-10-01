@@ -3,6 +3,7 @@ require '3_util'
 module Enumerable
   def find_first
     each { |x| return x if yield x }
+    nil
   end
 
   def includes_match?
