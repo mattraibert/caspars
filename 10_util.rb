@@ -21,3 +21,13 @@ class Marks
   end
 end
 
+def find_primes n
+  marks = Marks.new n
+  primes = []
+  p = 2
+  while p && primes << p
+    marks.mark_multiples p
+    p = marks.find_first_unmarked p
+  end
+  primes
+end
