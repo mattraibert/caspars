@@ -31,8 +31,7 @@ max = pairs(3..16).map do |pair|
     (0..3).map { |i| matrix[y-i][x-i].to_i }.inject(:*), #up left
     (0..3).map { |i| matrix[y-i][x+i].to_i }.inject(:*), #up right
     (0..3).map { |i| matrix[y+i][x+i].to_i }.inject(:*), #down right
-    (0..3).map { |i| matrix[y+i][x-i].to_i }.inject(:*) #down left
-  ]
+    (0..3).map { |i| matrix[y+i][x-i].to_i }.inject(:*)] #down left
 end.flatten.max
 
 puts max
