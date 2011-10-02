@@ -1,6 +1,7 @@
 require '3_util'
 require '4_util'
 require '5_util'
+require 'enum_util'
 
 subfactors = pairs(1..20).select do |pair|
   divides?(pair[0], pair[1]) && pair[0] != pair[1]
@@ -11,7 +12,9 @@ required_factors = (1..20).select { |x| !subfactors.include?(x) }
 
 pop = product_of_primes 20
 
-puts pop * (1..(1.0/0.0)).find_first { |x|
+first = (1..(1.0/0.0)).find_first do |x|
   the_answer = x * pop
   (not required_factors.includes_match? { |factor| !divides?(factor, the_answer) } )
-}
+end
+
+puts pop * first
