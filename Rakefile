@@ -6,4 +6,10 @@ Rake::TestTask.new(:test) do |test|
   test.verbose = true
 end
 
+Rake::TestTask.new(:answers) do |test|
+  test.libs << '.' << 'test'
+  test.pattern = (1..11).map {|i| "#{i}.rb" }
+  test.verbose = true
+end
+
 task :default => :test
