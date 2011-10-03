@@ -1,4 +1,4 @@
-require '3_util'
+require 'prime_util'
 require 'enum_util'
 
 def find_next_prime n

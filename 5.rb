@@ -1,6 +1,6 @@
-require '3_util'
 require '4_util'
 require '5_util'
+require 'prime_util'
 require 'enum_util'
 
 subfactors = pairs(1..20).select do |pair|
