@@ -16,6 +16,6 @@ module Enumerable
   end
 end
 
-def series(&block)
-  (0..(1.0/0.0)).lazy_map {|x| yield x}
+def series(init=0, &block)
+  (init..(1.0/0.0)).lazy_map {|x| yield x}
 end
