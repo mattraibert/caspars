@@ -1,7 +1,7 @@
 require 'minitest/autorun'
-require '10_util'
+require 'eratsothenes'
 
-class TenUtilTest < MiniTest::Unit::TestCase
+class EratsothenesTest < MiniTest::Unit::TestCase
   def test_marks
     marks = Marks.new 10
     marks.mark(2)

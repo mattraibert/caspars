@@ -1,3 +1,3 @@
-require '10_util'
+require 'eratsothenes'
 
 puts find_primes(2000000).inject(:+)
