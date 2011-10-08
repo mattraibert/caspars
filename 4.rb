@@ -1,3 +1,3 @@
-require '4_util'
+require 'range_util'
 
-puts pairs(100..999).map { |pair| pair[0] * pair[1] }.select { |x| palindromic? x }.max
+puts (100..999).pairs.map { |pair| pair.first * pair.last }.select { |x| palindromic? x }.max
