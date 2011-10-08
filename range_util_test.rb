@@ -3,6 +3,7 @@ require 'range_util'
 
 class RangeUtilTest < MiniTest::Unit::TestCase
   def test_palindrome
+    assert(palindromic?(nil))
     assert(palindromic?(9009))
     assert(!palindromic?(1234))
     assert(palindromic?(11211))
@@ -19,6 +20,7 @@ class RangeUtilTest < MiniTest::Unit::TestCase
   end
 
   def test_stutter
+    assert_equal [1,1,2,2], [*(1..2).stutter]
     assert_equal [1,1,1,2,2,2,3,3,3], [*(1..3).stutter]
     assert_equal [2,2,2,3,3,3,4,4,4], [*(2..4).stutter]
   end

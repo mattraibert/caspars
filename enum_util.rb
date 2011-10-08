@@ -1,7 +1,6 @@
 module Enumerable
   def find_first
-    each { |x| return x if yield x }
-    false
+    find { |x| yield x } || false
   end
 
   def includes_match?
