@@ -5,10 +5,6 @@ def palindromic? n
   (0..n.size).collect { |i| n[i] == n[-1-i] }.inject(true) { |sum, x| sum &&= x }
 end
 
-def pairs range
-  range.pairs
-end
-
 class Range
   def size
     last - first + 1
