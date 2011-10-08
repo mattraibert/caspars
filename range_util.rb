@@ -1,8 +1,9 @@
 require 'lazy_enum'
+require 'enum_util'
 
 def palindromic? n
   n = n.to_s
-  (0..n.size).collect { |i| n[i] == n[-1-i] }.inject(true) { |sum, x| sum &&= x }
+  !(0..n.size).includes_match? { |i| n[i] != n[-1-i] }
 end
 
 class Range
