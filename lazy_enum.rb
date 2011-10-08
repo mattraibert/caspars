@@ -16,6 +16,16 @@ module Enumerable
   end
 end
 
+class Enumerator
+  def lazy_zip with
+    Enumerator.new do |yielder|
+      loop do
+        yielder << [self.next,with.next]
+      end
+    end
+  end
+end
+
 def series(init=0, &block)
   (init..(1.0/0.0)).lazy_map {|x| yield x}
 end

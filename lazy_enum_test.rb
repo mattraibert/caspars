@@ -14,6 +14,12 @@ class LazyEnumTest < MiniTest::Unit::TestCase
     assert_equal [0,2,4,6,8], series { |x| x * 2 }.take(5)
     assert_equal [2,4,6,8,10], series(1) { |x| x * 2 }.take(5)
   end
+
+  def test_lazy_zip_does
+    zip = series{|x| x }.lazy_zip(series {|x| x+1})
+    assert_equal [0,1], zip.next
+    assert_equal [1,2], zip.next
+  end
 end
 
 
