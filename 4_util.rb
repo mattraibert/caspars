@@ -10,15 +10,19 @@ def pairs range
 end
 
 class Range
+  def size
+    last - first + 1
+  end
+  
   def stutter
-    (last * last).times.lazy_map {|x| first + (x / last) }
+    (size * size).times.lazy_map {|x| first + (x / size) }
   end
 
   def squared
-    (last * last).times.lazy_map {|x| first + (x % last) }
+    (size * size).times.lazy_map {|x| first + (x % size) }
   end
 
   def pairs
-    (last * last).times.lazy_map {|x| [first + (x / last), first + (x % last)] }
+    stutter.lazy_zip squared
   end
 end
