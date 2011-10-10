@@ -8,7 +8,6 @@ class Fixnum
   end
 end
 
-
 def small_factors n
   (Math.sqrt(n).truncate.downto 1).select { |x| x.divides? n }
 end

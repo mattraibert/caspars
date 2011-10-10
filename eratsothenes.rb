@@ -11,7 +11,7 @@ class Marks
   end
 
   def find_first_unmarked n=0
-    @marked_numbers[n+1..-1].find_first {|x| x != 'x' }
+    @marked_numbers[n+1..-1].find {|x| x != 'x' } || false
   end
 
   def mark_multiples p

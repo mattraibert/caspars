@@ -2,11 +2,6 @@ require 'minitest/autorun'
 require 'prime_util'
 
 class PrimeUtilTest < MiniTest::Unit::TestCase
-  def test_find_first_finds_the_first_match
-    assert_equal 2, [1,2,3,4].find_first { |x| x % 2 == 0 }
-    assert_equal 4, [3,4].find_first { |x| x % 2 == 0 }
-  end
-
   def test_small_factors_skips_factors_above_sqrt
     assert_equal [2,1], small_factors(6)
     assert_equal [2,1], small_factors(14)
