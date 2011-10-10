@@ -14,4 +14,9 @@ class EnumUtilTest < MiniTest::Unit::TestCase
     assert_equal 1, (1..4).find_first { |x| x % 2 == 1 }
     assert_equal false, (1..4).find_first { |x| x % 5 == 0 }
   end
+
+  def test_all_match
+    assert [3,6,9].all_match? { |x| x % 3 == 0 }
+    assert ![3,4,5].all_match? { |x| x % 3 == 0 }
+  end
 end
