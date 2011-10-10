@@ -3,12 +3,11 @@ require 'eratsothenes'
 require 'prime_util'
 require 'enum_util'
 
-subfactors = (1..20).pairs.select do |pair|
-  divides?(pair.first, pair.last) && pair.first != pair.last
-end
+subfactors = (1..20).pairs.select { |pair| pair.first.divides?(pair.last) && pair.first != pair.last }
 
 subfactors = subfactors.map {|pair| pair.first}.uniq
-required_factors = (1..20).select { |x| !subfactors.include?(x) }
+
+required_factors = [*(1..20)] - subfactors
 
 pop = find_primes(20).inject(:*)
 
