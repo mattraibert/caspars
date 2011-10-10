@@ -1,5 +1,5 @@
 require 'range_util'
-require '5_util'
+require 'eratsothenes'
 require 'prime_util'
 require 'enum_util'
 
@@ -10,7 +10,7 @@ end
 subfactors = subfactors.map {|pair| pair.first}.uniq
 required_factors = (1..20).select { |x| !subfactors.include?(x) }
 
-pop = product_of_primes 20
+pop = find_primes(20).inject(:*)
 
 first = (1..(1.0/0.0)).find_first do |x|
   the_answer = x * pop
