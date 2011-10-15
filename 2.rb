@@ -1,27 +1,6 @@
-@fibs = [1,2]
+require 'fibs'
+require 'lazy_enum'
 
-until(@fibs[-1] >= 4000000)
-  @fibs << @fibs[-1] + @fibs[-2]
-end
+f = Fibs.new
 
-@fibs = @fibs[0..-2]
-
-puts @fibs.select {|x| x % 2 == 0}.inject(0) {|sum, x| sum += x}
-
-
-@fibs = nil
-
-class Fibs
-  def calc n
-    @fibs ||= [1,2]
-    while @fibs.size < n+1
-      @fibs << @fibs[-1] + @fibs[-2]
-    end
-    @fibs[n]
-  end
-
-  def fib n
-    @fibs ||= [1,2]
-    @fibs[n] || @fibs[n] = calc(n)
-  end
-end
+puts series { |n| f.fib n }.lazy_select { |fib| fib.even? }.take_while { |even_fib| even_fib < 4000000 }.inject(:+)
