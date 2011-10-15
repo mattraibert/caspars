@@ -26,7 +26,7 @@ class Enumerator
   end
 end
 
-def series(init=0, &block)
+def series(init=0)
   (init..(1.0/0.0)).lazy_map {|x| yield x}
 end
 
