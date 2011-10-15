@@ -3,4 +3,4 @@ require 'prime_util'
 require 'enum_util'
 require 'lazy_enum'
 
-puts series { |i| triangle i }.find_first { |x| factors(x).size > 500 }
+puts triangle find { |x| triangle_factors(x).size >= 500 }

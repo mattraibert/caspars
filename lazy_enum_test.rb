@@ -21,10 +21,3 @@ class LazyEnumTest < MiniTest::Unit::TestCase
     assert_equal [1,2], zip.next
   end
 end
-
-
-
-
-
-
-
