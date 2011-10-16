@@ -1,8 +1,4 @@
-def divides? x, y
-  y % x == 0
-end
-
-class Fixnum
+class Integer
   def divides? dividend
     dividend % self == 0
   end

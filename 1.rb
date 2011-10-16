@@ -1,1 +1,3 @@
-puts (1..999).select {|x| x % 3 == 0 || x % 5 == 0}.inject(0) {|sum, x| sum += x }
+require 'prime_util'
+
+puts (1..999).select { |x| 3.divides?(x) || 5.divides?(x) }.inject(:+)
