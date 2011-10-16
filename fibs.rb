@@ -13,9 +13,7 @@ class Fibs
   end
 end
 
-
-
-
-
-
-
+def fib n
+  @f ||= Fibs.new
+  @f.fib n
+end
