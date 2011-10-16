@@ -29,4 +29,4 @@ class String
   end
 end
 
-puts Chunkable.new(thousand, 5).map { |chunk| chunk.inject(1) { |product, x| product *= x.to_i } }.max
+puts thousand.chunks(5).map { |chunk| chunk.map { |x| x.to_i }.inject(:*) }.max

@@ -10,3 +10,9 @@ class Chunkable
     (0..(@contents.size - @chunk_size)).each { |i| yield @contents[i,@chunk_size] }
   end
 end
+
+class String
+  def chunks n
+    Chunkable.new(self, n)
+  end
+end
