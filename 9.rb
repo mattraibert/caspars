@@ -1,12 +1,12 @@
+require 'range_util'
+require 'lazy_enum'
+
 def py_triplet? a,b,c
   (a < b && b < c) && (a**2 + b**2 == c**2)
 end
 
-(0..332).each do |x|
-  (1..499).each do |y|
-    z = 1000 - (x + y)
-    puts x*y*z if py_triplet? x,y,z
-  end
+def z pair
+  1000 - pair.inject(:+)
 end
 
-
+puts ((0..332).pair_with(1..499)).lazy_map { |pair| pair << z(pair) }.find { |triplet| py_triplet?(*triplet) }.inject(:*)

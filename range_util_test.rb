@@ -24,4 +24,24 @@ class RangeUtilTest < MiniTest::Unit::TestCase
     assert_equal [1,1,1,2,2,2,3,3,3], [*(1..3).stutter]
     assert_equal [2,2,2,3,3,3,4,4,4], [*(2..4).stutter]
   end
+
+  def test_star
+    assert_equal [1,2,3,1,2,3], [*(1..3) * 2]
+  end
+
+  def test_star_star
+    assert_equal [1,1,2,2,3,3], [*(1..3) ** 2]
+  end
+
+  def test_pair_with
+    [[1,1],[1,2],[1,3],[1,4],[2,1],[2,2],[2,3],[2,4],[3,1],[3,2],[3,3],[3,4]].each do |pair|
+      assert (1..3).pair_with(1..4).include?(pair), "#{pair} should have been listed"
+    end
+    [[1,1],[2,2],[6,6],[3,5]].each do |pair|
+      assert !(3..5).pair_with(2..4).include?(pair), "#{pair} should not have been listed"
+    end
+    [[3,2],[5,4],[3,4]].each do |pair|
+      assert (3..5).pair_with(2..4).include?(pair), "#{pair} should have been listed"
+    end
+  end
 end
