@@ -30,13 +30,3 @@ class String
 end
 
 puts thousand.map { |x| x.to_i }.each_cons(5).map { |chunk| chunk.inject(:*) }.max
-
-
-
-
-
-
-
-
-
-
