@@ -29,4 +29,14 @@ class String
   end
 end
 
-puts thousand.chunks(5).map { |chunk| chunk.map { |x| x.to_i }.inject(:*) }.max
+puts thousand.map { |x| x.to_i }.each_cons(5).map { |chunk| chunk.inject(:*) }.max
+
+
+
+
+
+
+
+
+
+
