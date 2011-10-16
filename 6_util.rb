@@ -1,9 +1,10 @@
 require 'lazy_enum'
+require '12_util'
 
 def sum_of_squares n
-  series { |x| x ** 2 }.take(n).inject(:+)
+  series(1) { |x| x ** 2 }.take(n).inject(:+)
 end
 
 def square_of_sum n
-  (1..n).inject(:+) ** 2
+  triangle(n) ** 2
 end
