@@ -15,9 +15,7 @@ class Marks
   end
 
   def mark_multiples p
-    (p..(@n / p)).each do |i|
-      mark(i*p)
-    end
+    (p..(@n / p)).each { |i| mark(i*p) }
   end
 end
 

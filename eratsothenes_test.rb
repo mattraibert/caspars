@@ -24,6 +24,6 @@ class EratsothenesTest < MiniTest::Unit::TestCase
   end
 
   def test_find_primes
-    assert_equal [2,3,5,7], find_primes(10)
+    assert_equal [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89], find_primes(90)
   end
 end

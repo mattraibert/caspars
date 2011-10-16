@@ -7,10 +7,3 @@ class DigitsTest < MiniTest::Unit::TestCase
     assert_equal [0,0,0,9], [*9000.digits]
   end
 end
-
-
-
-
-
-
-
