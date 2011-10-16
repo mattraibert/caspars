@@ -2,7 +2,7 @@ require 'prime_util'
 require 'enum_util'
 
 def find_next_prime n
-   ((n+1)..(1.0/0.0)).find_first { |x| prime? x }
+   ((n+1)..(1.0/0.0)).find_first { |x| x.prime? }
 end
 
 def find_prime n

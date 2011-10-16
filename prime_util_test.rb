@@ -18,5 +18,14 @@ class PrimeUtilTest < MiniTest::Unit::TestCase
     assert_equal [3,2], prime_factors(6)
     assert_equal [7,2], prime_factors(14)
     assert_equal [5], prime_factors(25)
+    assert_equal [7,2], prime_factors(28)
   end
 end
+
+
+
+
+
+
+
+
