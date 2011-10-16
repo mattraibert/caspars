@@ -3,4 +3,5 @@ def perf_time msg
   yield
   final = Time.now
   puts "#{final - start}seconds: #{msg}"
+  final - start
 end

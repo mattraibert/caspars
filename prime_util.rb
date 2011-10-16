@@ -17,5 +17,6 @@ def prime? n
 end
 
 def prime_factors n
-  small_factors(n).select { |x| prime? x }
+  small_prime_factors = small_factors(n).select { |x| prime? x }
+  (small_prime_factors.map { |p| n / p } + small_prime_factors).uniq
 end
