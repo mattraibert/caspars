@@ -49,13 +49,9 @@ class Integer
   end
 
   def to_english
-    if self <= 99
-      return tens
-    elsif self <= 999
-      return hundreds
-    else
-      return "one thousand"
-    end
+    return tens if self <= 99
+    return hundreds if self <= 999
+    return english[self]
   end
 end
 
