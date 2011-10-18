@@ -26,11 +26,7 @@ class Integer
       60=> 'sixty',
       70=> 'seventy',
       80=> 'eighty',
-      90=> 'ninety',
-      1000=> 'one thousand',
-      :hundred=> 'hundred',
-      :thousand=> 'thousand',
-      :and => 'and'
+      90=> 'ninety'
     }
   end
 
@@ -51,7 +47,7 @@ class Integer
   def to_english
     return tens if self <= 99
     return hundreds if self <= 999
-    return english[self]
+    return "one thousand"
   end
 end
 
