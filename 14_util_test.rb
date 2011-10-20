@@ -6,29 +6,15 @@ class FourteenUtilTest < MiniTest::Unit::TestCase
     @cc = ChainCache.new
   end
 
-  def test_chain
-    assert_equal [13,40,20,10,5,16,8,4,2,1], chain(13)
-  end
+  def test_chain_length_records_lengths
+    assert_equal 10, @cc.chain_length(13)
 
-  def test_basics
-    @cc.record_length 2,2
-    assert_equal 1, @cc.lookup_length(1)
-    assert_equal 2, @cc.lookup_length(2)
-    assert @cc.is_cached? 1
-    assert @cc.is_cached? 2
-    assert !@cc.is_cached?(3)
-  end
+    [13,40,20,10,5,16,8,4,2,1].each do |x| 
+      assert @cc.is_cached?(x)
+    end
 
-  def test_first_known
-    @cc.record_length 4,3
-    @cc.record_length 2,2
-    assert_equal 4, @cc.first_known([16,8,4,2])
-  end
-
-  def test_unknown_portion
-    @cc.record_length 4,3
-    @cc.record_length 2,2
-    assert_equal [16,8], @cc.unknown_portion([16,8,4,2])
+    assert_equal 10, @cc.lookup_length(13)
+    assert_equal 9, @cc.lookup_length(40)
   end
 
   def test_record_chain_from_prefix
