@@ -14,6 +14,14 @@ module Enumerable
       end
     end
   end
+
+  def lazy_map_with_index
+    Enumerator.new do |yielder|
+      self.each_with_index do |element, index|
+        yielder << yield(element, index)
+      end
+    end
+  end
 end
 
 class Enumerator
@@ -23,6 +31,12 @@ class Enumerator
         yielder << [self.next,with.next]
       end
     end
+  end
+end
+
+class Array
+  def tails
+    lazy_map_with_index { |x,i| self[i..-1] }
   end
 end
 

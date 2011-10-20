@@ -20,4 +20,16 @@ class LazyEnumTest < MiniTest::Unit::TestCase
     assert_equal [0,1], zip.next
     assert_equal [1,2], zip.next
   end
+
+  def test_tails
+    assert_equal [[1,2,3],[2,3],[3]], [1,2,3].tails.take(5)
+  end
 end
+
+
+
+
+
+
+
+
