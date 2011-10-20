@@ -1,5 +1,5 @@
-require 'lazy_enum'
-require '14_util'
+require './lazy_enum'
+require './14_util'
 
 cc = ChainCache.new
-puts (1..1_000_000).lazy_map { |x| [cc.chain_length(x),x] }.max[1]
+10.times { puts (1..40_000).lazy_map { |x| puts x; [cc.chain_length(x),x] }.max[1] }
