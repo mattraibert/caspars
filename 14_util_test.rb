@@ -10,7 +10,7 @@ class FourteenUtilTest < MiniTest::Unit::TestCase
     assert_equal 10, @cc.chain_length(13)
 
     [13,40,20,10,5,16,8,4,2,1].each do |x| 
-      assert @cc.is_cached?(x)
+      assert @cc.lookup_length(x)
     end
 
     assert_equal 10, @cc.lookup_length(13)
