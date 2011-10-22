@@ -7,12 +7,8 @@ class ChainCache
     @cc[start]
   end
 
-  def record_lengths unknown_prefix, known_item
-    known_length = lookup_length(known_item)
-    size = unknown_prefix.size
-    
-    @cc[unknown_prefix.first] = size + known_length
-#    unknown_prefix.each_with_index { |x,i| @cc[x] = (size - i) + known_length }
+  def record_lengths chain, known_item
+    @cc[chain.first] = chain.size + lookup_length(known_item)
   end
 
   def fcn n
@@ -39,11 +35,10 @@ class ChainCache
     chain = []
     x = n
     while(lookup_length(x).nil?)
-      puts x
       chain << x
       x = fcn x
     end
-    record_lengths chain, x
+    record_lengths(chain, x) 
     lookup_length(n)
   end
 end
