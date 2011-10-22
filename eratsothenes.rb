@@ -1,4 +1,4 @@
-require 'enum_util'
+require './enum_util'
 
 class Marks
   def initialize n

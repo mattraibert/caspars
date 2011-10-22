@@ -1,5 +1,5 @@
-require 'lazy_enum'
-require 'prime_util'
+require './lazy_enum'
+require './prime_util'
 
 def triangle n
   n*(n+1)/2

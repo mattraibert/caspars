@@ -1,5 +1,5 @@
-require 'lazy_enum'
-require 'enum_util'
+require './lazy_enum'
+require './enum_util'
 
 def palindromic? n
   n = n.to_s
