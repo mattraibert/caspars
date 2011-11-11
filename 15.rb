@@ -1,18 +1,12 @@
-#0,0 0,1 0,2 0,3 0,4
-#1,0 1,1 1,2 1,3 1,4
-#2,0 2,1 2,2 2,3 2,4
-#3,0 3,1 3,2 3,3 3,4
-#4,0 4,1 4,2 4,3 4,4
+def pascal_next prev
+  prev = [0] + prev + [0]
+  prev.each_cons(2).map { |x, y| x + y }
+end
 
-# 7035155 1 
-# 3520104 1 
-# 15106 3 1 
-# 5 4 3 2 1 
-# 1 1 1 1 1 
+def pascals n
+  triangle = [[1]]
+  n.times { triangle << pascal_next(triangle[-1]) }
+  triangle
+end
 
-#pascals triangle?
-
-#all paths from a corner are of the same length
-
-1 3 6 10 15
-
+puts pascals(21 + 20)[-1].max
