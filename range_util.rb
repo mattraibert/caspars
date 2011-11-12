@@ -3,7 +3,7 @@ require './enum_util'
 
 def palindromic? n
   n = n.to_s
-  !(1..n.size/2).includes_match? { |i| n[i] != n[-1-i] }
+  !(0..n.size/2).includes_match? { |i| n[i] != n[-1-i] }
 end
 
 class Range

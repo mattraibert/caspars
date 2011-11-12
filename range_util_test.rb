@@ -6,6 +6,7 @@ class RangeUtilTest < MiniTest::Unit::TestCase
     assert(palindromic?(nil))
     assert(palindromic?(9009))
     assert(!palindromic?(1234))
+    assert(!palindromic?(1224))
     assert(palindromic?(11211))
     assert(!palindromic?(11238))
   end
