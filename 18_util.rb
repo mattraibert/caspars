@@ -25,8 +25,9 @@ class Node
   end
 end
 
-def enrich two_rows
-  below, above = two_rows
-  below.each_cons(2).zip(above).each {|pair, x| x.optify pair }
-  two_rows
+def enrich triangle
+  triangle.each_cons(2) do |below, above|
+    below.each_cons(2).zip(above).each {|pair, x| x.optify pair }
+  end
+  triangle
 end

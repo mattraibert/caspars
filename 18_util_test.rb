@@ -21,28 +21,15 @@ class EighteenUtilTest < MiniTest::Unit::TestCase
 
   def test_something
     nodes = Node.wrap([[1,2,3],[4,5],[6]])
-    result = enrich([nodes[0], nodes[1]])
+    result = enrich(nodes)
 
     values = result.map {|row| row.map {|x| x.value } }
-    assert_equal([[1,2,3],[6,8]], values)
+    assert_equal([[1,2,3],[6,8],[14]], values)
 
     xs = result.map {|row| row.map {|x| x.x } }
-    assert_equal([[1,2,3],[4,5]], xs)
+    assert_equal([[1,2,3],[4,5], [6]], xs)
 
     paths = result.map {|row| row.map {|x| x.path } }
-    assert_equal([[[],[],[]],[[R],[R]]], paths)
-
-    #******
-    result = enrich([result[1], nodes[2]])
-
-    values = result.map {|row| row.map {|x| x.value } }
-    assert_equal([[6,8],[14]], values)
-
-    xs = result.map {|row| row.map {|x| x.x } }
-    assert_equal([[4,5],[6]], xs)
-
-    paths = result.map {|row| row.map {|x| x.path } }
-    assert_equal([[[R],[R]],[[R,R]]], paths)
-
+    assert_equal([[[],[],[]],[[R],[R]],[[R, R]]], paths)
   end
 end
