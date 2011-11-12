@@ -9,4 +9,4 @@ def pascals n
   triangle
 end
 
-puts pascals(21 + 20)[-1].max
+puts pascals(20 + 20)[-1].max
