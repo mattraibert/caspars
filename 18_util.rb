@@ -25,9 +25,17 @@ class Node
   end
 end
 
-def enrich triangle
-  triangle.each_cons(2) do |below, above|
-    below.each_cons(2).zip(above).each {|pair, x| x.optify pair }
+class Triangle
+  attr_reader :triangle
+  
+  def initialize triangle
+    @triangle = Node.wrap(triangle)
+    @triangle.each_cons(2) do |below, above|
+      below.each_cons(2).zip(above).each {|pair, x| x.optify pair }
+    end
   end
-  triangle
+
+  def root
+    @triangle[-1][-1]
+  end
 end

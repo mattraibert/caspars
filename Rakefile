@@ -8,7 +8,7 @@ end
 
 Rake::TestTask.new(:answers) do |test|
   test.libs << '.' << 'test'
-  test.pattern = ([*(1..14)] + [16,17,25]).map {|i| "#{i}.rb" }
+  test.pattern = ([*(1..18)] + [25]).map {|i| "#{i}.rb" }
   test.verbose = true
 end
 

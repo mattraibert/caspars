@@ -19,17 +19,16 @@ class EighteenUtilTest < MiniTest::Unit::TestCase
     assert_equal(3, result[0][2].x)
   end
 
-  def test_something
-    nodes = Node.wrap([[1,2,3],[4,5],[6]])
-    result = enrich(nodes)
+  def test_triangle
+    result = Triangle.new([[1,2,3],[4,5],[6]])
 
-    values = result.map {|row| row.map {|x| x.value } }
+    values = result.triangle.map {|row| row.map {|x| x.value } }
     assert_equal([[1,2,3],[6,8],[14]], values)
 
-    xs = result.map {|row| row.map {|x| x.x } }
+    xs = result.triangle.map {|row| row.map {|x| x.x } }
     assert_equal([[1,2,3],[4,5], [6]], xs)
 
-    paths = result.map {|row| row.map {|x| x.path } }
+    paths = result.triangle.map {|row| row.map {|x| x.path } }
     assert_equal([[[],[],[]],[[R],[R]],[[R, R]]], paths)
   end
 end
