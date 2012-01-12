@@ -10,7 +10,7 @@ class Range
   def size
     last - first + 1
   end
-  
+
   def stutter
     (size * size).times.lazy_map {|x| first + (x / size) }
   end
