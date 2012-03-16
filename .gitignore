@@ -2,6 +2,7 @@
 \#*
 .\#*
 answers.rb
+answers.clj
 /pom.xml
 *jar
 /lib

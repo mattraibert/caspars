@@ -1,3 +1,4 @@
-(defproject caspars "1.0.0-SNAPSHOT"
-  :description "FIXME: write description"
+(defproject caspars "0"
+  :description "Euler project"
+  :dev-dependencies [[midje "1.3.1-SNAPSHOT"]]
   :dependencies [[org.clojure/clojure "1.3.0"]])
