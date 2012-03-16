@@ -1,13 +1,11 @@
 # caspars
 
-FIXME: write description
+Clojure solutions to the problems from the Euler Project
 
 ## Usage
 
-FIXME: write
+Lein Midje
 
 ## License
 
-Copyright (C) 2012 FIXME
-
-Distributed under the Eclipse Public License, the same as Clojure.
+All Rights Reserved
