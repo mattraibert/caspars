@@ -4,7 +4,8 @@
   (:use [midje.sweet]))
 
 (fact "check answers"
-  (one) => (answers 1))
+  (one) => (answers 1)
+  (two) => (answers 2))
 
 (fact "divides"
   (divides? 3 9) => true

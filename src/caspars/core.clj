@@ -11,3 +11,9 @@
 
 (defn one []
   (sum (filter allowed? (range 1 1000))))
+
+(def fib (concat [0 1] (lazy-seq (map + fib (rest fib)))))
+
+(def even-fib (filter even? fib))
+
+(defn two [] (apply + (take-while (fn [it] (< it 4000000)) even-fib)))
