@@ -1,9 +1,12 @@
 require './prime_util'
 
 def sum_fact(n)
-  proper_factors(n).inject(:+) || 0
+  @sum_facts ||= []
+  @sum_facts[n] ||= (proper_factors(n).inject(:+) || 0)
 end
 
-pairs = (0..10_000).map { |x| [x, sum_fact(x)] }
+def amicable? n
+  n == sum_fact(sum_fact(n)) && n != sum_fact(n)
+end
 
-puts pairs.select { |x| pairs[x[1]] == [x[1], x[0]] }.reject { |x| x[0] == x[1] }.flatten.uniq.inject(:+)
+puts (0..10_000).select {|x| amicable? x }.inject(:+)
