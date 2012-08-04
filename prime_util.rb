@@ -12,8 +12,12 @@ def small_factors n
   (Math.sqrt(n).truncate.downto 1).select { |x| x.divides? n }
 end
 
+def proper_factors n
+  ((n/2).truncate.downto 1).select { |x| x.divides? n }
+end
+
 def factors n
-  [n] + ((n/2).truncate.downto 1).select { |x| x.divides? n }
+  [n] + proper_factors(n)
 end
 
 def prime_factors n
