@@ -1,6 +1,8 @@
+require './sum'
+
 def sum_fact(n)
   @sum_facts ||= []
-  @sum_facts[n] ||= (proper_factors(n).inject(:+) || 0)
+  @sum_facts[n] ||= (proper_factors(n).sum || 0)
 end
 
 def amicable? n
