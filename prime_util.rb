@@ -13,7 +13,8 @@ def small_factors n
 end
 
 def proper_factors n
-  ((n/2).truncate.downto 1).select { |x| x.divides? n }
+  sf = small_factors(n)
+  (sf.map { |x| n / x } + sf).uniq - [n]
 end
 
 def factors n

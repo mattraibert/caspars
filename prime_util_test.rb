@@ -15,6 +15,8 @@ class PrimeUtilTest < MiniTest::Unit::TestCase
   end
 
   def test_proper_factors
+    assert_equal [], proper_factors(1)
+    assert_equal [1], proper_factors(2)
     assert_equal [3,2,1], proper_factors(6)
     assert_equal [3,1], proper_factors(9)
     assert_equal [7,2,1], proper_factors(14)
