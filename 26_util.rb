@@ -7,12 +7,10 @@ def recurring_cycle(rat)
     remainders << r
     q, r = (r * 10).divmod d
   end
-  remainders << r
-  remainders
-  return [0] if remainders.last == 0
-  remainders[remainders.index(remainders.last)..-1]
+  return [] if r == 0
+  remainders[remainders.index(r)..-1]
 end
 
 def cycle_length rat
-  recurring_cycle(rat).size - 1
+  recurring_cycle(rat).size
 end
