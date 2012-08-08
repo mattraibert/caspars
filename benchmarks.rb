@@ -2,7 +2,7 @@ require 'benchmark'
 
 n = 50000
 this_time = Benchmark.bm(7) do |x|
-  ((1..23).to_a + [25,67]).each do |problem|
+  ((1..25).to_a + [67]).each do |problem|
     x.report("#{problem}:") { `ruby -I. #{problem}.rb` }
   end
 end
@@ -12,8 +12,8 @@ prev_time = eval File.read("performance.rb")
 
 IO.write("performance.rb", performance.to_s)
 
-comparisons =  performance.keys.map do |k|
-  delta = (prev_time[k] - performance[k]).round(2)
+comparisons = performance.keys.map do |k|
+  delta = ((prev_time[k] || 0) - performance[k]).round(2)
   case delta
     when -0.1..0.1
       "#{k}: not much change (#{delta})"
