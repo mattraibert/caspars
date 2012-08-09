@@ -4,7 +4,7 @@ class Integer
   end
 
   def prime?
-    self != 1 && small_factors(self).size == 1
+    self > 1 && small_factors(self).size == 1
   end
 end
 
