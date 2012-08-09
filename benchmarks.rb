@@ -2,7 +2,7 @@ require 'benchmark'
 
 n = 50000
 this_time = Benchmark.bm(7) do |x|
-  ((1..25).to_a + [67]).each do |problem|
+  ((1..26).to_a + [67]).each do |problem|
     x.report("#{problem}:") { `ruby -I. #{problem}.rb` }
   end
 end
