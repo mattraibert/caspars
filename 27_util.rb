@@ -2,10 +2,10 @@ require './lazy_enum'
 require './range_util'
 require './prime_util'
 
-def quadratic(a, b, n)
-  n**2 + a * n + b
+def quadratic(a, b, c, n)
+  a * n**2 + b * n + c
 end
 
-def how_many_consecutive_primes?(a, b)
-  find { |n| !(quadratic(a, b, n)).prime? }
+def how_many_consecutive_primes?(b, c)
+  find { |n| !(quadratic(1, b, c, n)).prime? }
 end

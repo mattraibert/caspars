@@ -1,6 +1,6 @@
 require './27_util'
 require './maximize'
 
-a, b = maximize((-999..999).pair_with(1..999)) { |a, b| how_many_consecutive_primes?(a, b) }
+b, c = maximize((-999..999).pair_with(1..999)) { |b, c| how_many_consecutive_primes?(b, c) }
 
-puts a * b
+puts b * c
