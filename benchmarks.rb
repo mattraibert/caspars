@@ -1,7 +1,6 @@
 require 'benchmark'
 
-n = 50000
-this_time = Benchmark.bm(7) do |x|
+this_time = Benchmark.bm do |x|
   ((1..27).to_a + [67]).each do |problem|
     x.report("#{problem}:") { `ruby -I. #{problem}.rb` }
   end
@@ -13,15 +12,16 @@ prev_time = eval File.read("performance.rb")
 IO.write("performance.rb", performance.to_s.gsub(/,/, ",\n"))
 
 comparisons = performance.keys.map do |k|
-  #TODO use percentage change
-  delta = ((prev_time[k] || 0) - performance[k]).round(2)
+  previous_run = (prev_time[k] || 0)
+  delta = (previous_run - performance[k])
+  delta = (100 * delta / previous_run).round(2)
   case delta
-    when -0.1..0.1
-      "#{k}: not much change (#{delta})"
-    when (-1.0/0.0)..-0.1
-      "#{k}: got slower by #{delta}"
-    when 0.1..(1.0/0.0)
-      "#{k}: got faster by #{delta}"
+    when -10..10
+      "#{k}: not much change (#{delta}%)"
+    when (-1.0/0.0)..-10
+      "#{k}: got slower by #{delta}%"
+    when 10..(1.0/0.0)
+      "#{k}: got faster by #{delta}%"
     else
       "#{k} doesn't seem to have a score"
   end
