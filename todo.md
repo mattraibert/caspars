@@ -1,6 +1,5 @@
-* test maximize function
 * use maximize function everywhere
-* use sum function everywhere
+* test maximize function
 * improve performance of 14
 * improve performance of 27
 * improve performance of 10

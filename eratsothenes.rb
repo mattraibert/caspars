@@ -3,7 +3,7 @@ require './enum_util'
 class Marks
   def initialize n
     @n = n
-    @marked_numbers= (0..n).map {|x| x }
+    @marked_numbers= (0..n).map { |x| x }
   end
 
   def mark x
@@ -11,7 +11,7 @@ class Marks
   end
 
   def find_first_unmarked n=0
-    @marked_numbers[n+1..-1].find {|x| x != 'x' } || false
+    @marked_numbers[n+1..-1].find { |x| x != 'x' }
   end
 
   def mark_multiples p
@@ -19,8 +19,8 @@ class Marks
   end
 end
 
-def find_primes n
-  marks = Marks.new n
+def find_primes upto
+  marks = Marks.new upto
   primes = []
   p = 2
   while p && primes << p
