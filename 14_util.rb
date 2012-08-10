@@ -9,7 +9,7 @@ end
 
 def chain n
   chain = [n]
-  while(n > 1)
+  while n > 1
     n = fcn n
     chain << n
   end

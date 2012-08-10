@@ -1,4 +1,4 @@
-require './benchmark'
+require 'benchmark'
 
 this_time = Benchmark.bm do |x|
   ((1..27).to_a + [67]).each do |problem|
