@@ -1,5 +1,5 @@
-require 'minitest/autorun'
-require 'prime_util'
+require './test_helper'
+require './prime_util'
 
 class PrimeUtilTest < MiniTest::Unit::TestCase
   def test_small_factors_skips_factors_above_sqrt

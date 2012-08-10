@@ -1,4 +1,4 @@
-require 'minitest/autorun'
+require './test_helper'
 require '6_util'
 
 class SixUtilTest < MiniTest::Unit::TestCase
@@ -10,11 +10,3 @@ class SixUtilTest < MiniTest::Unit::TestCase
     assert_equal 3025, square_of_sum(10)
   end
 end
-
-
-
-
-
-
-
-

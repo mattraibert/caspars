@@ -1,4 +1,4 @@
-require 'minitest/autorun'
+require './test_helper'
 require 'lazy_enum'
 
 class LazyEnumTest < MiniTest::Unit::TestCase

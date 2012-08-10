@@ -1,4 +1,4 @@
-require 'minitest/autorun'
+require './test_helper'
 require 'eratsothenes'
 
 class EratsothenesTest < MiniTest::Unit::TestCase

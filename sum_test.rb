@@ -1,4 +1,4 @@
-require 'minitest/autorun'
+require './test_helper'
 require './sum.rb'
 
 class SumTest < MiniTest::Unit::TestCase

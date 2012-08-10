@@ -1,4 +1,4 @@
-require 'minitest/autorun'
+require './test_helper'
 require './histogram'
 
 class HistogramTest < MiniTest::Unit::TestCase

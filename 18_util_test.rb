@@ -1,4 +1,4 @@
-require 'minitest/autorun'
+require './test_helper'
 require '18_util.rb'
 
 class EighteenUtilTest < MiniTest::Unit::TestCase

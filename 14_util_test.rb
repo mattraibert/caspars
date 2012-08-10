@@ -1,4 +1,4 @@
-require 'minitest/autorun'
+require './test_helper'
 require '14_util'
 
 class FourteenUtilTest < MiniTest::Unit::TestCase
