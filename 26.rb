@@ -1,3 +1,4 @@
 require './26_util.rb'
+require './maximize'
 
-puts (1..1000).map { |x| [x, cycle_length(x)] }.max { |y,z| y[1]<=> z[1] }[0]
+puts maximize(1..1000) { |x| cycle_length(x) }
