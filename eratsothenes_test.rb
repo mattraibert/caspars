@@ -1,5 +1,5 @@
 require './test_helper'
-require 'eratsothenes'
+require './eratsothenes'
 
 class EratsothenesTest < MiniTest::Unit::TestCase
   def test_marks

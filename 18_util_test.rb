@@ -1,5 +1,5 @@
 require './test_helper'
-require '18_util.rb'
+require './18_util.rb'
 
 class EighteenUtilTest < MiniTest::Unit::TestCase
   L, R = 'L', 'R'

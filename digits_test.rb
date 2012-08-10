@@ -1,5 +1,5 @@
 require './test_helper'
-require 'digits'
+require './digits'
 
 class DigitsTest < MiniTest::Unit::TestCase
   def test_digits

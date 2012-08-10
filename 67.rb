@@ -1,4 +1,4 @@
-require '18_util'
+require './18_util'
 
 super_big = Triangle.new [[59],
 [73, 41],
