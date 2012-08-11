@@ -31,6 +31,7 @@ class AnswersTest < MiniTest::Unit::TestCase
              27 => -59231,
              28 => 669171001,
              29 => 9183,
+             30 => 443839,
              67 => 7273}
 
   ANSWERS.each do |problem, answer|
