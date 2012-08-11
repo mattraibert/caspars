@@ -7,11 +7,7 @@ def fcn n
   end
 end
 
-def chain n
-  chain = [n]
-  while n > 1
-    n = fcn n
-    chain << n
-  end
-  chain
+def chain_length n
+  @chain_lengths ||= {1 => 1}
+  @chain_lengths[n] ||= 1 + chain_length(fcn n)
 end
