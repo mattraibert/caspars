@@ -1,5 +1,5 @@
-require './test_helper'
-require './28_util'
+require 'test_helper'
+require '28_util'
 
 class TwentyEightUtilTest < Minitest::Test
   def test_sum_corners

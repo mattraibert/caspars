@@ -1,5 +1,5 @@
-require './test_helper'
-require './6_util'
+require 'test_helper'
+require '6_util'
 
 class SixUtilTest < Minitest::Test
   def test_sum_of_squares

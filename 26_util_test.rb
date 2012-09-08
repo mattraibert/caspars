@@ -1,5 +1,5 @@
-require './test_helper'
-require './26_util'
+require 'test_helper'
+require '26_util'
 
 class TwentySixUtilTest < Minitest::Test
   def test_cycle_length

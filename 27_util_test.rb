@@ -1,7 +1,7 @@
 #n² + n + 41 produces primes for 0..39
 #n² − 79n + 1601 produces primes for 0..79
-require './test_helper'
-require './27_util'
+require 'test_helper'
+require '27_util'
 
 class TwentySevenUtilTest < Minitest::Test
   def test_how_many_consecutive_primes?

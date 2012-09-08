@@ -1,5 +1,5 @@
-require './test_helper'
-require './14_util'
+require 'test_helper'
+require '14_util'
 
 class FourteenUtilTest < Minitest::Test
   def test_chain_length

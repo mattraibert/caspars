@@ -1,5 +1,5 @@
-require './test_helper'
-require './histogram'
+require 'test_helper'
+require 'histogram'
 
 class HistogramTest < Minitest::Test
   def test_histogram

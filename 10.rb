@@ -1,3 +1,3 @@
-require './eratsothenes'
+require 'eratsothenes'
 
 puts find_primes(2_000_000).sum
