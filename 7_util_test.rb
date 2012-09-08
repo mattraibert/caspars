@@ -1,5 +1,5 @@
-require './test_helper'
-require './7_util'
+require 'test_helper'
+require '7_util'
 
 class SevenUtilTest < MiniTest::Unit::TestCase
   def test_find_next_prime

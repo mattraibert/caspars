@@ -1,4 +1,4 @@
-require './amicable_util'
+require 'amicable_util'
 
 def abundant? n
   sum_fact(n) > n

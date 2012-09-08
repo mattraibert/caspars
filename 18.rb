@@ -1,4 +1,4 @@
-require './18_util'
+require '18_util'
 
 small = Triangle.new [[3],
   [7, 4],

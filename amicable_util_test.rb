@@ -1,5 +1,5 @@
-require './test_helper'
-require './amicable_util'
+require 'test_helper'
+require 'amicable_util'
 
 class AmicableUtilTest < MiniTest::Unit::TestCase
   def test_sum_fact

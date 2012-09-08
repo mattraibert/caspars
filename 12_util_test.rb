@@ -1,5 +1,5 @@
-require './test_helper'
-require './12_util'
+require 'test_helper'
+require '12_util'
 
 class TwelveUtilTest < MiniTest::Unit::TestCase
   def test_triangle

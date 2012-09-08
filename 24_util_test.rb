@@ -1,5 +1,5 @@
-require './test_helper'
-require './24_util'
+require 'test_helper'
+require '24_util'
 
 class TwentyFourUtilTest < MiniTest::Unit::TestCase
   def test_permute

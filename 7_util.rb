@@ -1,5 +1,5 @@
-require './prime_util'
-require './enum_util'
+require 'prime_util'
+require 'enum_util'
 
 def find_next_prime n
    ((n+1)..(1.0/0.0)).find { |x| x.prime? }

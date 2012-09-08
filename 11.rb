@@ -1,4 +1,4 @@
-require './range_util'
+require 'range_util'
 
 class ElevenMatrix
   def initialize

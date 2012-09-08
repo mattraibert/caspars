@@ -1,5 +1,5 @@
-require './test_helper'
-require './fibs'
+require 'test_helper'
+require 'fibs'
 
 class FibsTest < MiniTest::Unit::TestCase
   def test_fibs

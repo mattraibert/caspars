@@ -1,5 +1,5 @@
-require './test_helper'
-require './31_util'
+require 'test_helper'
+require '31_util'
 
 class ThirtyOneUtilTest < MiniTest::Unit::TestCase
   def test_make
