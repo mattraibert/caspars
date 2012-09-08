@@ -1,4 +1,4 @@
-require 'sum'
+require 'five_leaves/sum'
 
 class Integer
   def english

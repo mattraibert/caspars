@@ -1,6 +1,6 @@
-require 'range_util'
-require 'lazy_enum'
-require 'sum'
+require 'five_leaves/range_util'
+require 'five_leaves/lazy_enum'
+require 'five_leaves/sum'
 
 def py_triplet? a, b, c
   (a < b && b < c) && (a**2 + b**2 == c**2)

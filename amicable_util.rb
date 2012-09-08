@@ -1,5 +1,5 @@
-require 'prime_util'
-require 'sum'
+require 'five_leaves/prime_util'
+require 'five_leaves/sum'
 
 def sum_fact(n)
   @sum_facts ||= []

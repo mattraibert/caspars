@@ -1,6 +1,6 @@
 require 'eratsothenes'
-require 'prime_util'
-require 'lazy_enum'
+require 'five_leaves/prime_util'
+require 'five_leaves/lazy_enum'
 
 pop = find_primes(20).inject(:*)
 
