@@ -6,7 +6,7 @@ class LazyEnumTest < Minitest::Test
     assert_equal [0,2,4,6,8], (0..(1.0/0.0)).lazy_select { |x| x % 2 == 0 }.take(5)
   end
 
-  def test_lazy_map_can_map_inifinite_series
+  def test_lazy_map_can_map_infinite_series
     assert_equal [0,2,4,6,8], (0..(1.0/0.0)).lazy_map { |x| x * 2 }.take(5)    
   end
 
