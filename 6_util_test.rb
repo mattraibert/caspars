@@ -1,7 +1,7 @@
 require './test_helper'
 require './6_util'
 
-class SixUtilTest < MiniTest::Unit::TestCase
+class SixUtilTest < Minitest::Test
   def test_sum_of_squares
     assert_equal 385, sum_of_squares(10)
   end

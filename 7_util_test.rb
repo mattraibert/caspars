@@ -1,7 +1,7 @@
 require './test_helper'
 require './7_util'
 
-class SevenUtilTest < MiniTest::Unit::TestCase
+class SevenUtilTest < Minitest::Test
   def test_find_next_prime
     assert_equal 5, find_next_prime(3)
     assert_equal 13, find_next_prime(11)

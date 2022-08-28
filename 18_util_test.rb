@@ -1,7 +1,7 @@
 require './test_helper'
 require './18_util.rb'
 
-class EighteenUtilTest < MiniTest::Unit::TestCase
+class EighteenUtilTest < Minitest::Test
   L, R = 'L', 'R'
 
   def test_optify

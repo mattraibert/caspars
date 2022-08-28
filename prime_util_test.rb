@@ -1,7 +1,7 @@
 require './test_helper'
 require './prime_util'
 
-class PrimeUtilTest < MiniTest::Unit::TestCase
+class PrimeUtilTest < Minitest::Test
   def test_small_factors_skips_factors_above_sqrt
     assert_equal [2,1], small_factors(6)
     assert_equal [2,1], small_factors(14)

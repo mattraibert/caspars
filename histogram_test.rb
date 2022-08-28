@@ -1,7 +1,7 @@
 require './test_helper'
 require './histogram'
 
-class HistogramTest < MiniTest::Unit::TestCase
+class HistogramTest < Minitest::Test
   def test_histogram
     assert_equal "" "vodka: #####
 water: ########################################################

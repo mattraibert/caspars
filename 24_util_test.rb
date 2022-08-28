@@ -1,7 +1,7 @@
 require './test_helper'
 require './24_util'
 
-class TwentyFourUtilTest < MiniTest::Unit::TestCase
+class TwentyFourUtilTest < Minitest::Test
   def test_permute
     assert_equal([[0]], permute([0]))
     assert_equal([[0, 1], [1, 0]], permute([0, 1]))

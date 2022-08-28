@@ -1,7 +1,7 @@
 require './test_helper'
 require './eratsothenes'
 
-class EratsothenesTest < MiniTest::Unit::TestCase
+class EratsothenesTest < Minitest::Test
   def test_marks
     marks = Marks.new 10
     marks.mark(2)

@@ -1,7 +1,7 @@
 require './test_helper'
 require './amicable_util'
 
-class AmicableUtilTest < MiniTest::Unit::TestCase
+class AmicableUtilTest < Minitest::Test
   def test_sum_fact
     assert_equal 220, sum_fact(284)
     assert_equal 284, sum_fact(220)

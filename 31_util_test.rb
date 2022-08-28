@@ -1,7 +1,7 @@
 require './test_helper'
 require './31_util'
 
-class ThirtyOneUtilTest < MiniTest::Unit::TestCase
+class ThirtyOneUtilTest < Minitest::Test
   def test_make
     assert_equal([[10]], make_change(10, [1]))
     assert_equal([[5]], make_change(10, [2]))

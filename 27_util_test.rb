@@ -3,7 +3,7 @@
 require './test_helper'
 require './27_util'
 
-class TwentySevenUtilTest < MiniTest::Unit::TestCase
+class TwentySevenUtilTest < Minitest::Test
   def test_how_many_consecturive_primes?
     assert_equal(40, how_many_consecutive_primes?(1, 41))
     assert_equal(80, how_many_consecutive_primes?(-79, 1601))

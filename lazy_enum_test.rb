@@ -1,7 +1,7 @@
 require './test_helper'
 require './lazy_enum'
 
-class LazyEnumTest < MiniTest::Unit::TestCase
+class LazyEnumTest < Minitest::Test
   def test_lazy_select_can_select_from_infinite_series
     assert_equal [0,2,4,6,8], (0..(1.0/0.0)).lazy_select { |x| x % 2 == 0 }.take(5)
   end

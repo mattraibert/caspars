@@ -1,7 +1,7 @@
 require './test_helper'
 require './range_util'
 
-class RangeUtilTest < MiniTest::Unit::TestCase
+class RangeUtilTest < Minitest::Test
   def test_palindrome
     assert(palindromic?(nil))
     assert(palindromic?(9009))

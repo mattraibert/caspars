@@ -1,6 +1,6 @@
 require './test_helper'
 
-class AnswersTest < MiniTest::Unit::TestCase
+class AnswersTest < Minitest::Test
 
   ANSWERS = {1 => 233168,
              2 => 4613732,

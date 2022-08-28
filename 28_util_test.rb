@@ -1,7 +1,7 @@
 require './test_helper'
 require './28_util'
 
-class TwentyEightUtilTest < MiniTest::Unit::TestCase
+class TwentyEightUtilTest < Minitest::Test
   def test_sum_corners
     assert_equal(1, sum_corners(1))
     assert_equal(10, sum_corners(2))

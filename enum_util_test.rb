@@ -1,7 +1,7 @@
 require './test_helper'
 require './enum_util'
 
-class EnumUtilTest < MiniTest::Unit::TestCase
+class EnumUtilTest < Minitest::Test
   def test_includes_match
     assert [1,2,3].includes_match? { |x| x == 3 }
     assert ![1,2,3].includes_match? { |x| x == 4 }
