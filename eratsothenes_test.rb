@@ -20,7 +20,7 @@ class EratsothenesTest < Minitest::Test
 
   def test_find_first_unmarked_returns_nil_after_list
     marks = Marks.new 10
-    assert_equal nil, marks.find_first_unmarked(10)
+    assert_nil marks.find_first_unmarked(10)
   end
 
   def test_find_primes
