@@ -1,5 +1,4 @@
 require './prime_util'
-require './sum'
 
 def sum_fact(n)
   @sum_facts ||= []

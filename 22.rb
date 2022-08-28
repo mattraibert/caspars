@@ -1,4 +1,3 @@
-require './sum'
 
 def value(char)
   ('A'..'Z').to_a.find_index(char) + 1

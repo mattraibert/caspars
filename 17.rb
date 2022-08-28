@@ -1,4 +1,3 @@
-require './sum'
 
 class Integer
   def english

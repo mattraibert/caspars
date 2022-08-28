@@ -1,6 +1,5 @@
 require './range_util'
 require './lazy_enum'
-require './sum'
 
 def py_triplet? a, b, c
   (a < b && b < c) && (a**2 + b**2 == c**2)

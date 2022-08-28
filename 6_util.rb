@@ -1,6 +1,5 @@
 require './lazy_enum'
 require './12_util'
-require './sum'
 
 def sum_of_squares n
   series(1) { |x| x ** 2 }.take(n).sum

@@ -1,5 +1,4 @@
 require './fibs'
 require './lazy_enum'
-require './sum'
 
 puts series { |n| fib n }.lazy_select { |fib| fib.even? }.take_while { |even_fib| even_fib < 4000000 }.sum
