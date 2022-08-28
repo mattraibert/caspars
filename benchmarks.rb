@@ -15,14 +15,16 @@ def percent_change(prev, current)
   100 * ((current - prev)/prev.abs)
 end
 
-comparisons = performance.keys.map do |k|
-
-  prev = prev_time[k] || 0
-  current = performance[k]
-  percent_delta = percent_change((prev) , current).round(1)
+def change(current, prev)
+  percent_delta = percent_change(prev, current).round(1)
   time_delta = (current - prev).round(3)
 
   change_str = "#{percent_delta}% (#{time_delta} seconds) was: #{prev.round(3)}, now: #{current.round(3)}"
+  [change_str, percent_delta]
+end
+
+comparisons = performance.keys.map do |k|
+  change_str, percent_delta = change(performance[k], prev_time[k] || 0)
 
   case percent_delta
     when -10..10
@@ -37,3 +39,6 @@ comparisons = performance.keys.map do |k|
 end
 
 puts comparisons
+
+change_str, _ = change(performance.values.sum, prev_time.values.sum)
+puts "overall: #{change_str}"
