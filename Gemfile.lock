@@ -1,12 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.0.3.1)
+    activesupport (7.0.4.3)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-    concurrent-ruby (1.1.10)
+    concurrent-ruby (1.2.2)
     five_leaves (0.2.1)
     highline (2.0.3)
     i18n (1.12.0)
@@ -17,11 +17,12 @@ GEM
       five_leaves
       highline
     rake (13.0.6)
-    tzinfo (2.0.5)
+    tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
 
 PLATFORMS
   arm64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   activesupport
