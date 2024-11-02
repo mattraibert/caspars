@@ -1,4 +1,4 @@
-require './test_helper'
+require './test/test_helper'
 require './26_util'
 
 class TwentySixUtilTest < Minitest::Test

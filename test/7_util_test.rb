@@ -1,4 +1,4 @@
-require './test_helper'
+require './test/test_helper'
 require './7_util'
 
 class SevenUtilTest < Minitest::Test

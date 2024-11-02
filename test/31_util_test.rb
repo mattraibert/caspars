@@ -1,4 +1,4 @@
-require './test_helper'
+require './test/test_helper'
 require './31_util'
 
 class ThirtyOneUtilTest < Minitest::Test

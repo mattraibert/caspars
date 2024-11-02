@@ -1,4 +1,4 @@
-require './test_helper'
+require './test/test_helper'
 require './eratsothenes'
 
 class EratsothenesTest < Minitest::Test
