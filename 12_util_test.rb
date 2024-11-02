@@ -9,7 +9,7 @@ class TwelveUtilTest < Minitest::Test
 
   def test_triangle_factors
     (1..5).each do |x|
-      assert_equal factors(triangle(x)).sort, triangle_factors(x).sort
+      assert_equal FiveLeaves.factors(triangle(x)).sort, triangle_factors(x).sort
     end
   end
 end

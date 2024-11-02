@@ -1,5 +1,5 @@
-require './lazy_enum'
+require 'five_leaves/lazy_enum'
 require './14_util'
-require './maximize'
+require 'five_leaves/maximize'
 
-puts maximize { |x| chain_length(x) }
+puts FiveLeaves.maximize { |x| chain_length(x) }

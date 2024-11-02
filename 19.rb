@@ -1,4 +1,4 @@
-require './range_util'
+require 'five_leaves/range_util'
 require 'active_support'
 require 'active_support/core_ext'
 

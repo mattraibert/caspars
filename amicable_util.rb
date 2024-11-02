@@ -1,8 +1,8 @@
-require './prime_util'
+require 'five_leaves/prime_util'
 
 def sum_fact(n)
   @sum_facts ||= []
-  @sum_facts[n] ||= (proper_factors(n).sum || 0)
+  @sum_facts[n] ||= (FiveLeaves.proper_factors(n).sum || 0)
 end
 
 def amicable? n

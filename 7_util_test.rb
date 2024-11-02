@@ -6,7 +6,7 @@ class SevenUtilTest < Minitest::Test
     assert_equal 5, find_next_prime(3)
     assert_equal 13, find_next_prime(11)
   end
-  
+
   def test_find_prime
     assert_equal 13, find_prime(6)
   end

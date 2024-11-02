@@ -1,3 +1,3 @@
-require './prime_util'
+require 'five_leaves/prime_util'
 
-puts prime_factors(600851475143).max
+puts FiveLeaves.prime_factors(600851475143).max
