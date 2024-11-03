@@ -7,6 +7,7 @@ def value_str(str)
   str.each_char.map { |x| value(x) }.sum
 end
 
-names = IO.read("./names.txt").gsub(/"/, '').split(/,/).sort
-
-puts names.map { |name| value_str name }.each_with_index.map { |name, i| name * (i + 1) }.sum
+def n22
+  names = IO.read("./names.txt").gsub(/"/, '').split(/,/).sort
+  names.map { |name| value_str name }.each_with_index.map { |name, i| name * (i + 1) }.sum
+end

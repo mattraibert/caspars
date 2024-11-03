@@ -1,3 +1,5 @@
 require 'five_leaves/prime_util'
 
-puts FiveLeaves.prime_factors(600851475143).max
+def n3
+  FiveLeaves.prime_factors(600851475143).max
+end

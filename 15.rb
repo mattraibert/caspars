@@ -9,4 +9,6 @@ def pascals n
   triangle
 end
 
-puts pascals(20 + 20).last.max
+def n15
+  pascals(20 + 20).last.max
+end

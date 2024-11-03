@@ -1,3 +1,5 @@
 require './7_util'
 
-puts find_prime(10001)
+def n7
+  find_prime(10001)
+end

@@ -58,4 +58,6 @@ class String
   end
 end
 
-puts (1..1000).map { |x| x.to_english.no_ws.size }.sum
+def n17
+  (1..1000).map { |x| x.to_english.no_ws.size }.sum
+end

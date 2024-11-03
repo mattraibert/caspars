@@ -8,7 +8,7 @@ end
 
 Rake::TestTask.new(:answers) do |test|
   test.libs << '.' << 'test'
-  test.pattern = 'test/answers.rb'
+  test.pattern = 'test/answers_test.rb'
   test.verbose = true
 end
 

@@ -9,4 +9,6 @@ def z pair
   1000 - pair.sum
 end
 
-puts ((0..332).pair_with(1..499)).lazy_map { |pair| pair << z(pair) }.find { |triplet| py_triplet?(*triplet) }.inject(:*)
+def n9
+  ((0..332).pair_with(1..499)).lazy_map { |pair| pair << z(pair) }.find { |triplet| py_triplet?(*triplet) }.inject(:*)
+end
