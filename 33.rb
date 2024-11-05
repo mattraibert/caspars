@@ -5,7 +5,7 @@ def n33
       (1..9).map do |d|
         numerator = n * 10 + cancel
         denominator = cancel * 10 + d
-        if n.to_f / d == numerator.to_f / denominator && numerator != denominator
+        if numerator != denominator && n.to_f / d == numerator.to_f / denominator
           cancellers << Rational(numerator, denominator)
         end
       end
