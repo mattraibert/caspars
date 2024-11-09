@@ -9,3 +9,5 @@ gem 'posto'
 group :test do
   gem "minitest"
 end
+
+gem "pry", "~> 0.14.2"
