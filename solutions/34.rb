@@ -8,10 +8,9 @@ end
 
 def curious?(n)
   return false if [1, 2].include? n
-  digit_factorials = digit_factorials(n)
-  digit_factorials.sum == n
+  digit_factorials(n).sum == n
 end
 
 def n34
-  (1..10000000).select { |n| curious? n }.sum
+  1_0000_000.times.map.select { |n| curious? n }.sum
 end
