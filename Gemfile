@@ -5,6 +5,7 @@ gem 'activesupport'
 gem 'i18n', '>= 0.0.4'
 gem 'rake'
 gem 'posto'
+gem 'prime'
 
 group :test do
   gem "minitest"

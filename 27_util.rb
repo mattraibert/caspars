@@ -1,6 +1,6 @@
 require 'five_leaves/lazy_enum'
 require 'five_leaves/range_util'
-require 'five_leaves/prime_util'
+require 'prime'
 
 def quadratic(a, b, c, n)
   a * n**2 + b * n + c

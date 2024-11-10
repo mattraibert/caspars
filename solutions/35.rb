@@ -1,5 +1,5 @@
 require './35_util'
-# require 'five_leaves/prime_util'
+require 'prime'
 def n35
   allowable_digits = [nil, 1, 3, 7, 9]
 

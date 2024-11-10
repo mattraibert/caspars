@@ -1,5 +1,4 @@
 require './12_util'
-require 'five_leaves/prime_util'
 require 'five_leaves/enum_util'
 require 'five_leaves/lazy_enum'
 

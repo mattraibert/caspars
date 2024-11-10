@@ -1,4 +1,5 @@
 require 'five_leaves/prime_util'
+require 'prime'
 
 def sum_fact(n)
   @sum_facts ||= []
