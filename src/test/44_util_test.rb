@@ -42,9 +42,9 @@ class FortyFourUtilTest < Minitest::Test
 
   def test_pentagonal_pairs
     pairs = pentagonal_pairs.to_a
-    assert_equal(2, pentagonal_size)
-    assert_equal(59, pairs.count)
-    assert_equal([], pairs)
+    pi, pj, pk, pl = pairs
+    assert_equal(5482660, pk - pj)
+    assert_equal([5482660, 1560090, 7042750, 8602840], pairs)
   end
 end
 

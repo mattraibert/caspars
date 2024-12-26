@@ -17,17 +17,17 @@ def pentagonals(max = (1.0 / 0.0))
 end
 
 def pentagonal_pairs
-  (500..1000).pairs.map do |i, j|
+  (1..2500).pairs.lazy_map do |i, j|
     pi = pentagonal(i)
     pj = pentagonal(j)
-    # i + 2j
     [pi, pj, pi + pj, pi + 2 * pj]
-  end.select do |pi, pj, pk, pl|
+  end.find do |pi, pj, pk, pl|
     pentagonal?(pk) && pentagonal?(pl)
   end
 end
 
 def pentagonal?(p)
-  pentagonals(Math.sqrt(p)).any?(p)
+  float = (Math.sqrt(24 * p + 1) + 1) / 6.0
+  float == float.to_i
 end
 
