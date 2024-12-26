@@ -9,6 +9,7 @@ gem 'prime'
 
 group :test do
   gem "minitest"
+  gem "mutex_m"
 end
 
 gem "pry"
